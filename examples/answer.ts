@@ -1,7 +1,7 @@
-import { Answer } from "../index";
+import { WrappedAnswer } from "../index";
 
 // Example usage of the Answer type
-const exampleAnswer: Answer = {
+const exampleAnswer: WrappedAnswer = {
     guid: "answer_guid",
     answer: {
       name: "answer_name",

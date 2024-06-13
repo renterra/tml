@@ -1,6 +1,10 @@
 {
   "name": "@renterra/tml",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renterra/tml"
+  },
   "description": "TML (Thoughtspot Markup Language)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

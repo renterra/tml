@@ -1,0 +1,731 @@
+guid: 74852035-9624-4fac-b352-200fa8506b14
+liveboard:
+  name: Object Usage
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Monthly Table Volume
+      description: count of events for each table
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "[Table name] [Timestamp].monthly count [Incident id] [Table Sub type] = 'one_to_one_logical'"
+      answer_columns:
+      - name: Table name
+      - name: Month(Timestamp)
+      - name: Number of Incident id
+      table:
+        table_columns:
+        - column_id: Table name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Table name
+        - Month(Timestamp)
+        - Number of Incident id
+        client_state: ""        
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Table name
+        - column_id: Month(Timestamp)
+        - column_id: Number of Incident id
+        axis_configs:
+        - x:
+          - Month(Timestamp)
+          y:
+          - Number of Incident id
+          color:
+          - Table name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 895df620-fcb6-4235-85e3-003a5d0f09b7
+  - id: Viz_2
+    answer:
+      name: Monthly Worksheet Volume
+      description: count of events for each worksheet
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "[Table name] [Timestamp].monthly count [Incident id] [Table Sub type] = 'worksheet'"
+      answer_columns:
+      - name: Table name
+      - name: Month(Timestamp)
+      - name: Number of Incident id
+      table:
+        table_columns:
+        - column_id: Table name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Table name
+        - Month(Timestamp)
+        - Number of Incident id
+        client_state: ""
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Table name
+        - column_id: Month(Timestamp)
+        - column_id: Number of Incident id
+        axis_configs:
+        - x:
+          - Month(Timestamp)
+          y:
+          - Number of Incident id
+          color:
+          - Table name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: f04a9d66-3cfc-444f-a7b2-1e933ec58e8a
+  - id: Viz_3
+    answer:
+      name: Monthly View Volume
+      description: count of events for each table
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "[Table name] [Timestamp].monthly count [Incident id] [Table Sub type] = 'aggr_worksheet'"
+      answer_columns:
+      - name: Table name
+      - name: Month(Timestamp)
+      - name: Number of Incident id
+      table:
+        table_columns:
+        - column_id: Table name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Incident id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Table name
+        - Month(Timestamp)
+        - Number of Incident id
+        client_state: ""
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Table name
+        - column_id: Month(Timestamp)
+        - column_id: Number of Incident id
+        axis_configs:
+        - x:
+          - Month(Timestamp)
+          y:
+          - Number of Incident id
+          color:
+          - Table name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 868fa778-3b30-4933-a071-fb1719b6cbda
+  - id: Viz_4
+    answer:
+      name: Liveboards used, last month
+      description: Count of unique liveboards
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "unique count [Pinboard name] [Timestamp].monthly [Timestamp].'last 12 months'"
+      answer_columns:
+      - name: Unique Number of Pinboard name
+      - name: Month(Timestamp)
+      table:
+        table_columns:
+        - column_id: Month(Timestamp)
+          show_headline: false
+        - column_id: Unique Number of Pinboard name
+          show_headline: false
+        ordered_column_ids:
+        - Month(Timestamp)
+        - Unique Number of Pinboard name
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Timestamp)
+        - column_id: Unique Number of Pinboard name
+        axis_configs:
+        - x:
+          - Month(Timestamp)
+          y:
+          - Unique Number of Pinboard name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 5dd4c053-3ec3-439c-becf-ee657056dd54
+  - id: Viz_5
+    answer:
+      name: Answers used, last month
+      description: Count of unique answers
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "unique count [Answer name] [Timestamp].monthly [Timestamp].'last 12 months'"
+      answer_columns:
+      - name: Unique Number of Answer name
+      - name: Month(Timestamp)
+      table:
+        table_columns:
+        - column_id: Month(Timestamp)
+          show_headline: false
+        - column_id: Unique Number of Answer name
+          show_headline: false
+        ordered_column_ids:
+        - Month(Timestamp)
+        - Unique Number of Answer name
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Timestamp)
+        - column_id: Unique Number of Answer name
+        axis_configs:
+        - x:
+          - Month(Timestamp)
+          y:
+          - Unique Number of Answer name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 05057690-1640-49d1-ac39-fa8d4f334f5a
+  - id: Viz_6
+    answer:
+      name: Worksheets used, last month
+      description: Count of unique worksheets
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "unique count [Worksheet name] [Timestamp].monthly [Timestamp].'last 12 months'"
+      answer_columns:
+      - name: Unique Number of Worksheet name
+      - name: Month(Timestamp)
+      table:
+        table_columns:
+        - column_id: Month(Timestamp)
+          show_headline: false
+        - column_id: Unique Number of Worksheet name
+          show_headline: false
+        ordered_column_ids:
+        - Month(Timestamp)
+        - Unique Number of Worksheet name
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Timestamp)
+        - column_id: Unique Number of Worksheet name
+        axis_configs:
+        - x:
+          - Month(Timestamp)
+          y:
+          - Unique Number of Worksheet name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: eefb84bb-88a8-46fd-ba6f-b83bd3755bf1
+  - id: Viz_7
+    answer:
+      name: Tables used, last month
+      description: Count of unique tables
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "unique count [Table name] [Timestamp].monthly [Timestamp].'last 12 months'"
+      answer_columns:
+      - name: Unique Number of Table name
+      - name: Month(Timestamp)
+      table:
+        table_columns:
+        - column_id: Month(Timestamp)
+          show_headline: false
+        - column_id: Unique Number of Table name
+          show_headline: false
+        ordered_column_ids:
+        - Month(Timestamp)
+        - Unique Number of Table name
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Timestamp)
+        - column_id: Unique Number of Table name
+        axis_configs:
+        - x:
+          - Month(Timestamp)
+          y:
+          - Unique Number of Table name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 9bcd0ca9-45ef-42bd-98d6-41512b3f8a9b
+  - id: Viz_8
+    answer:
+      name: Tables Usage, by User
+      description: Usage for the last 30 days
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "[Table name] unique count [User name] sort by unique count [User name] descending count [User name] [User name] [Timestamp].'last 30 days'"
+      answer_columns:
+      - name: Table name
+      - name: Unique Number of User name
+        custom_name: Number of unique users
+      - name: Number of User name
+        custom_name: Count of object interactions
+      - name: User name
+      table:
+        table_columns:
+        - column_id: Table name
+          show_headline: false
+        - column_id: User name
+          show_headline: false
+        - column_id: Unique Number of User name
+          show_headline: false
+        - column_id: Number of User name
+          show_headline: false
+        ordered_column_ids:
+        - Table name
+        - User name
+        - Unique Number of User name
+        - Number of User name
+        client_state: ""
+      chart:
+        type: PIVOT_TABLE
+        chart_columns:
+        - column_id: Table name
+        - column_id: User name
+        - column_id: Unique Number of User name
+        - column_id: Number of User name
+        axis_configs:
+        - x:
+          - Table name
+          - User name
+          y:
+          - Unique Number of User name
+          - Number of User name
+        - y:
+          - Unique Number of User name
+          - Number of User name
+        - x:
+          - Table name
+          y:
+          - Unique Number of User name
+          - Number of User name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 77fb4b41-f8d6-4956-be87-08658077a256
+  - id: Viz_9
+    answer:
+      name: Top Users, last 30 days
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "[User name] top 30 [Timestamp].'last 30 days' count [Incident id]"
+      answer_columns:
+      - name: User name
+      - name: Number of Incident id
+      table:
+        table_columns:
+        - column_id: User name
+          show_headline: false
+        - column_id: Number of Incident id
+          show_headline: false
+        ordered_column_ids:
+        - User name
+        - Number of Incident id
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: User name
+        - column_id: Number of Incident id
+        axis_configs:
+        - x:
+          - User name
+          y:
+          - Number of Incident id
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: c74a9264-6275-427d-a9c9-1a9bb4e8ca0c
+  - id: Viz_10
+    answer:
+      name: Liveboard Usage, by User
+      description: Usage for the last 30 days
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "[Pinboard name] unique count [User name] sort by unique count [User name] descending count [User name] [User name] [Timestamp].'last 30 days'"
+      answer_columns:
+      - name: Pinboard name
+      - name: Unique Number of User name
+        custom_name: Number of unique users
+      - name: Number of User name
+        custom_name: Count of object interactions
+      - name: User name
+      table:
+        table_columns:
+        - column_id: Pinboard name
+          show_headline: false
+        - column_id: User name
+          show_headline: false
+        - column_id: Unique Number of User name
+          show_headline: false
+        - column_id: Number of User name
+          show_headline: false
+        ordered_column_ids:
+        - Pinboard name
+        - User name
+        - Unique Number of User name
+        - Number of User name
+        client_state: ""
+      chart:
+        type: PIVOT_TABLE
+        chart_columns:
+        - column_id: Pinboard name
+        - column_id: User name
+        - column_id: Unique Number of User name
+        - column_id: Number of User name
+        axis_configs:
+        - x:
+          - Pinboard name
+          - User name
+          y:
+          - Unique Number of User name
+          - Number of User name
+        - y:
+          - Unique Number of User name
+          - Number of User name
+        - x:
+          - Pinboard name
+          y:
+          - Unique Number of User name
+          - Number of User name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 24343fe5-d3ba-42ad-b32e-1997d9e42e80
+  - id: Viz_11
+    answer:
+      name: Answer Usage, by User
+      description: Usage for the last 30 days
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "[Answer name] unique count [User name] sort by unique count [User name] descending count [User name] [User name] [Timestamp].'last 30 days' count [User name]"
+      answer_columns:
+      - name: Answer name
+      - name: Unique Number of User name
+        custom_name: Number of unique users
+      - name: Number of User name
+        custom_name: Count of object interactions
+      - name: User name
+      table:
+        table_columns:
+        - column_id: Answer name
+          show_headline: false
+        - column_id: User name
+          show_headline: false
+        - column_id: Unique Number of User name
+          show_headline: false
+        - column_id: Number of User name
+          show_headline: false
+        ordered_column_ids:
+        - Answer name
+        - User name
+        - Unique Number of User name
+        - Number of User name
+        client_state: ""
+      chart:
+        type: PIVOT_TABLE
+        chart_columns:
+        - column_id: Answer name
+        - column_id: User name
+        - column_id: Unique Number of User name
+        - column_id: Number of User name
+        axis_configs:
+        - x:
+          - Answer name
+          - User name
+          y:
+          - Unique Number of User name
+          - Number of User name
+        - y:
+          - Unique Number of User name
+          - Number of User name
+        - x:
+          - Answer name
+          y:
+          - Unique Number of User name
+          - Number of User name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 9ebc9d1f-7a57-4712-b920-533af689151d
+  - id: Viz_12
+    answer:
+      name: "Worksheet Usage, by User"
+      description: Usage for the last 30 days
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "[Worksheet name] unique count [User name] sort by unique count [User name] descending [User name] [Timestamp].'last 30 days' count [User name]"
+      answer_columns:
+      - name: Worksheet name
+      - name: Unique Number of User name
+        custom_name: Number of unique users
+      - name: User name
+      - name: Number of User name
+        custom_name: Count of object interactions
+      table:
+        table_columns:
+        - column_id: Worksheet name
+          show_headline: false
+        - column_id: User name
+          show_headline: false
+        - column_id: Unique Number of User name
+          show_headline: false
+        - column_id: Number of User name
+          show_headline: false
+        ordered_column_ids:
+        - Worksheet name
+        - User name
+        - Unique Number of User name
+        - Number of User name
+        client_state: ""
+      chart:
+        type: PIVOT_TABLE
+        chart_columns:
+        - column_id: Worksheet name
+        - column_id: User name
+        - column_id: Unique Number of User name
+        - column_id: Number of User name
+        axis_configs:
+        - x:
+          - Worksheet name
+          - User name
+          y:
+          - Unique Number of User name
+          - Number of User name
+        - y:
+          - Unique Number of User name
+          - Number of User name
+        - x:
+          - Worksheet name
+          y:
+          - Unique Number of User name
+          - Number of User name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 498074ef-215b-4c7f-9260-4c472c144e66
+  - id: Viz_13
+    answer:
+      name: Answers
+      description: Total count of answers
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "unique count [Answer name] [Answer Reported] [Answer Reported].monthly [Answer Reported].'last 30 days'"
+      answer_columns:
+      - name: Unique Number of Answer name
+      - name: Month(Answer Reported)
+      table:
+        table_columns:
+        - column_id: Month(Answer Reported)
+          headline_aggregation: MIN-MAX
+        - column_id: Unique Number of Answer name
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Month(Answer Reported)
+        - Unique Number of Answer name
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Answer Reported)
+        - column_id: Unique Number of Answer name
+        axis_configs:
+        - y:
+          - Unique Number of Answer name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 08315394-ae68-4d3f-9e2e-aadaa0deac96
+  - id: Viz_14
+    answer:
+      name: Liveboards
+      description: Total count of liveboards
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "unique count [Pinboard name] [Pinboard Reported] [Pinboard Reported].monthly [Pinboard Reported].'last 30 days'"
+      answer_columns:
+      - name: Unique Number of Pinboard name
+      - name: Month(Pinboard Reported)
+      table:
+        table_columns:
+        - column_id: Month(Pinboard Reported)
+          show_headline: false
+        - column_id: Unique Number of Pinboard name
+          show_headline: false
+        ordered_column_ids:
+        - Month(Pinboard Reported)
+        - Unique Number of Pinboard name
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Pinboard Reported)
+        - column_id: Unique Number of Pinboard name
+        axis_configs:
+        - y:
+          - Unique Number of Pinboard name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: eb39ca6b-89f9-4b83-b32d-6f6311567e85
+  - id: Viz_15
+    answer:
+      name: Worksheets
+      description: Total count of worksheets
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "unique count [Worksheet name]"
+      answer_columns:
+      - name: Unique Number of Worksheet name
+      table:
+        table_columns:
+        - column_id: Unique Number of Worksheet name
+          show_headline: false
+        ordered_column_ids:
+        - Unique Number of Worksheet name
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Unique Number of Worksheet name
+        axis_configs:
+        - y:
+          - Unique Number of Worksheet name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: f0dad130-c72a-4d8c-bcee-02e7eb276248
+  - id: Viz_16
+    answer:
+      name: Tables
+      description: Total count of tables
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "unique count [Table name] [Table Reported] [Table Reported].monthly [Table Reported].'last 30 days'"
+      answer_columns:
+      - name: Unique Number of Table name
+      - name: Month(Table Reported)
+      table:
+        table_columns:
+        - column_id: Month(Table Reported)
+          show_headline: false
+        - column_id: Unique Number of Table name
+          show_headline: false
+        ordered_column_ids:
+        - Month(Table Reported)
+        - Unique Number of Table name
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Table Reported)
+        - column_id: Unique Number of Table name
+        axis_configs:
+        - y:
+          - Unique Number of Table name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 770b40eb-1881-42d2-acb7-e1d01a965b97
+  - id: Viz_17
+    answer:
+      name: Monthly Liveboard Volume
+      description: count of events for each liveboard
+      tables:
+      - id: Product Usage
+        name: Product Usage
+      search_query: "[Timestamp].monthly count [Incident id] [Pinboard name]"
+      answer_columns:
+      - name: Month(Timestamp)
+      - name: Number of Incident id
+      - name: Pinboard name
+      table:
+        table_columns:
+        - column_id: Month(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Pinboard name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Incident id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Month(Timestamp)
+        - Pinboard name
+        - Number of Incident id
+        client_state: ""
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(Timestamp)
+        - column_id: Pinboard name
+        - column_id: Number of Incident id
+        axis_configs:
+        - x:
+          - Month(Timestamp)
+          y:
+          - Number of Incident id
+          color:
+          - Pinboard name
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 18589f20-756f-4f97-895d-30c0af0f1322
+  filters:
+  - column:
+    - User name
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - Org Name
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_14
+      size: EXTRA_SMALL
+    - visualization_id: Viz_13
+      size: EXTRA_SMALL
+    - visualization_id: Viz_15
+      size: EXTRA_SMALL
+    - visualization_id: Viz_16
+      size: EXTRA_SMALL
+    - visualization_id: Viz_4
+      size: SMALL
+    - visualization_id: Viz_5
+      size: SMALL
+    - visualization_id: Viz_6
+      size: SMALL
+    - visualization_id: Viz_7
+      size: SMALL
+    - visualization_id: Viz_9
+      size: LARGE
+    - visualization_id: Viz_10
+      size: MEDIUM
+    - visualization_id: Viz_11
+      size: MEDIUM
+    - visualization_id: Viz_12
+      size: MEDIUM
+    - visualization_id: Viz_8
+      size: MEDIUM
+    - visualization_id: Viz_2
+      size: LARGE_SMALL
+    - visualization_id: Viz_1
+      size: LARGE_SMALL
+    - visualization_id: Viz_3
+      size: LARGE_SMALL
+    - visualization_id: Viz_17
+      size: LARGE_SMALL

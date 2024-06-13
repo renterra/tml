@@ -2,8 +2,7 @@ import type { Table, Formula, TableColumn, Chart, ParameterOverride, ParameterVa
 import { parse, stringify } from 'yaml'
 
 export interface Answer {
-    guid: string;
-    answer: {
+    
       name: string;
       description: string;
       tables: Table[];
@@ -19,15 +18,20 @@ export interface Answer {
       display_mode: string;
       parameter_values: ParameterValue[];
       parameter_overrides: ParameterOverride[];
-    };
+    
+  }
+
+export interface WrappedAnswer {
+    guid: string;
+    answer: Answer
   }
   
   
-export const parseAnswer = (raw: string): Answer => { 
-    return parse(raw) as Answer
+export const parseAnswer = (raw: string): WrappedAnswer => { 
+    return parse(raw) as WrappedAnswer
 }
 
-export const renderAnswer = (answer: Answer): string => { 
+export const renderAnswer = (answer: WrappedAnswer): string => { 
     return stringify(answer, {
         lineWidth: 0,
         indent: 2,

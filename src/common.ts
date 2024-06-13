@@ -1,7 +1,6 @@
 export type ColumnType = "MEASURE" | "ATTRIBUTE";
 export type DataType = "BOOL" | "VARCHAR" | "DOUBLE" | "FLOAT" | "INT" | "BIGINT" | "DATE" | "DATETIME" | "TIMESTAMP" | "TIME";
 export type AggregationType = "SUM" | "COUNT" | "AVERAGE" | "MAX" | "MIN" | "COUNT_DISTINCT" | "NONE" | "STD_DEVIATION" | "VARIANCE";
-type ColumnDataType = "INTEGER" | "FLOAT" | "STRING" | "BOOLEAN" | "DATE" | "DATETIME";
 
 export interface Table {
   id: string;
