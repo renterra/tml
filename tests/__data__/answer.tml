@@ -1,0 +1,59 @@
+guid: 9864668a-0545-4d35-9e61-6425c80b2193
+answer:
+  name: Sample Event Tracing for Consumption (Change the Credit Window ID and the Timestamp)
+  tables:
+  - id: Credit Usage Worksheet
+    name: Credit Usage Worksheet
+  search_query: "[Timestamp].detailed [User GUID] [Credit Window Rank] [Timestamp] after '12/31/2020' [Timestamp] before '12/31/2021' [Credit Window ID] sort by [Credit Window Rank] descending [Timestamp] [Timestamp].detailed [API] [Event Category] [Credit Window ID] = 1610340774000000000 [Username] [Username] = 'tsadmin'"
+  answer_columns:
+  - name: Timestamp
+  - name: User GUID
+  - name: Total Credit Window Rank
+  - name: Credit Window ID
+  - name: API
+  - name: Event Category
+  - name: Username
+  table:
+    table_columns:
+    - column_id: Timestamp
+      headline_aggregation: MIN-MAX
+    - column_id: User GUID
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Credit Window ID
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: API
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Event Category
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Username
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Credit Window Rank
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Timestamp
+    - User GUID
+    - Credit Window ID
+    - API
+    - Event Category
+    - Username
+    - Total Credit Window Rank
+    client_state: ""
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: Timestamp
+    - column_id: User GUID
+    - column_id: Credit Window ID
+    - column_id: API
+    - column_id: Event Category
+    - column_id: Username
+    - column_id: Total Credit Window Rank
+    axis_configs:
+    - x:
+      - Timestamp
+      y:
+      - Total Credit Window Rank
+      color:
+      - User GUID
+    client_state: ""
+  display_mode: TABLE_MODE
