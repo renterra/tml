@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/renterra/tml"
   },
-  "description": "TML (Thoughtspot Markup Language)",
+  "description": "TML (ThoughtSpot Modeling Language)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
