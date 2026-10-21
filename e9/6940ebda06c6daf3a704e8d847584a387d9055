@@ -1,0 +1,14 @@
+.nvmrc
+  h_7b94bf8a23aebe 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e96940ebda06c6daf3a704e8d847584a387d9055",
+  "prompts": {},
+  "humans": {
+    "h_7b94bf8a23aebe": {
+      "author": "Nick Hibberd <nhibberd@gmail.com>"
+    }
+  }
+}
